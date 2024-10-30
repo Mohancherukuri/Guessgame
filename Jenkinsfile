@@ -1,16 +1,16 @@
 pipeline {
     agent any
 
-    def getCurrentBranch () {
-        return sh (
-            script: 'git rev-parse --abbrev-ref HEAD',
-            returnStdout: true
-        ).trim()
-    }
-
-    def branchName = getCurrentBranch()
-    echo 'BRANCH.. ' + branchName
+    
     stages {
+        stage('Determine Branch') {
+            steps {
+                script {
+                    env.BRANCH_NAME = sh(script: 'git rev-parse --abbrev-ref HEAD', returnStdout: true).trim()
+                    echo "Building branch ${env.BRANCH_NAME}"
+                }
+            }
+        }
         stage('checkout') {
             steps {
                 echo "Checkout git branch ${env.BRANCH_NAME}"
