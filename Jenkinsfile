@@ -1,6 +1,15 @@
 pipeline {
     agent any
 
+    def getCurrentBranch () {
+        return sh (
+            script: 'git rev-parse --abbrev-ref HEAD',
+            returnStdout: true
+        ).trim()
+    }
+
+    def branchName = getCurrentBranch()
+    echo 'BRANCH.. ' + branchName
     stages {
         stage('checkout') {
             steps {
