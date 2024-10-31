@@ -1,20 +1,16 @@
 pipeline {
     agent any
 
+    environment {
+        BRANCH_NAME = "${env.GIT_BRANCH}"
+    }
     
     stages {
-        stage('Determine Branch') {
-            steps {
-                script {
-                    env.BRANCH_NAME = sh(script: 'git rev-parse --abbrev-ref HEAD', returnStdout: true).trim()
-                    echo "Building branch ${env.BRANCH_NAME}"
-                }
-            }
-        }
+        
         stage('checkout') {
             steps {
                 echo "Checkout git branch ${env.BRANCH_NAME}"
-                git branch: 'main', url: 'https://github.com/Mohancherukuri/Guessgame.git'
+                checkout scm
                 echo 'Checkout completed'
             }
         }
