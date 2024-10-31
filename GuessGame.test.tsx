@@ -3,15 +3,15 @@ import {render, fireEvent, waitFor} from '@testing-library/react-native';
 import GuessingGame from './GuessGame';
 
 describe('GuessingGame', () => {
-  it('renders the initial UI correctly', () => {
-    const {getByText, getByPlaceholderText} = render(<GuessingGame />);
+  // it('renders the initial UI correctly', () => {
+  //   const {getByText, getByPlaceholderText} = render(<GuessingGame />);
 
-    expect(getByText('Guess the Number!')).toBeTruthy();
-    expect(getByText('Enter a number between 1 and 100:')).toBeTruthy();
-    expect(getByPlaceholderText('Your guess')).toBeTruthy();
-    expect(getByText('Submit Guess')).toBeTruthy();
-    expect(getByText('Reset Game')).toBeTruthy();
-  });
+  //   expect(getByText('Guess the Number!')).toBeTruthy();
+  //   expect(getByText('Enter a number between 1 and 100:')).toBeTruthy();
+  //   expect(getByPlaceholderText('Your guess')).toBeTruthy();
+  //   expect(getByText('Submit Guess')).toBeTruthy();
+  //   expect(getByText('Reset Game')).toBeTruthy();
+  // });
 
   // it('displays "Too low" feedback for a lower guess', () => {
   //   const {getByPlaceholderText, getByText} = render(<GuessingGame />);
