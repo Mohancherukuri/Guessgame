@@ -79,7 +79,6 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   instructions: {
-    fontSize: 18,
     marginBottom: 10,
   },
   input: {
