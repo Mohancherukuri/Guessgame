@@ -28,7 +28,7 @@ const GuessingGame: React.FC = () => {
     }
 
     if (guessNumber === targetNumber) {
-      setFeedback('Congratulations! You guessed it right!');
+      setFeedback('Congratulations!You guessed it right!');
     } else if (guessNumber < targetNumber) {
       setFeedback('Too low, try again.');
     } else {
