@@ -47,7 +47,7 @@ const GuessingGame: React.FC = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Guess the Number! F</Text>
+      <Text style={styles.title}>Guess the Number!</Text>
       <Text style={styles.instructions}>Enter a number between 1 and 100:</Text>
 
       <TextInput

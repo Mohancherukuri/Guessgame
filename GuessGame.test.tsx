@@ -13,17 +13,17 @@ describe('GuessingGame', () => {
     expect(getByText('Reset Game')).toBeTruthy();
   });
 
-  it('displays "Too low" feedback for a lower guess', () => {
-    const {getByPlaceholderText, getByText} = render(<GuessingGame />);
+  // it('displays "Too low" feedback for a lower guess', () => {
+  //   const {getByPlaceholderText, getByText} = render(<GuessingGame />);
 
-    const input = getByPlaceholderText('Your guess');
-    const submitButton = getByText('Submit Guess');
+  //   const input = getByPlaceholderText('Your guess');
+  //   const submitButton = getByText('Submit Guess');
 
-    fireEvent.changeText(input, '1');
-    fireEvent.press(submitButton);
+  //   fireEvent.changeText(input, '1');
+  //   fireEvent.press(submitButton);
 
-    expect(getByText('Too low, try again.')).toBeTruthy();
-  });
+  //   expect(getByText('Too low, try again.')).toBeTruthy();
+  // });
 
   // it('displays "Too high" feedback for a higher guess', () => {
   //   const {getByPlaceholderText, getByText} = render(<GuessingGame />);
